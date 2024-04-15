@@ -6,6 +6,7 @@ function Dashboard(){
         <>
             <Header />
             <ProductCard />
+            <ProductCard />
         </>
     )
 }

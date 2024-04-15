@@ -1,0 +1,33 @@
+
+.card{
+    display: flex;
+    flex-direction: row;
+    justify-content:space-evenly;
+    /* border: 1px solid gray; */
+    width: 50%;
+    margin: 10px auto;
+    padding: 1em;
+    border-radius: 10px;
+    background-color: rgba(0, 128, 128, 0.120);
+    cursor: auto;
+    box-sizing: border-box;
+    box-shadow: 0.5px 0.5px 10px 0px rgba(181, 181, 181, 0.646);
+}
+
+
+.card:hover{
+    cursor: pointer;
+}
+
+.image{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left;
+}

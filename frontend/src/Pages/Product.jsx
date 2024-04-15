@@ -1,3 +1,4 @@
+import './Product.css'
 import axios from "axios";
 import Header from "../Components/Header";
 import { useEffect } from "react";
@@ -31,14 +32,19 @@ function Product({prodId}){
     return(
         <div>
             <Header />
-            <div>
-                <img src="" alt="prod img"/>
-                <h1>Product Title</h1>
-                <p>Product desc</p>
-                <p>Product ID: {prodId}</p>
+            <div className='container'>
+                <div>
+                    <img src="../../public/product.jpg" width={"100px"} alt="prod img"/>
+                </div>
+
+                <div>
+                    <h1>Product Title</h1>
+                    <p>Deatiled Product description</p>
+                    <p>Product ID: {prodId}</p>
+                    <button onClick={resgiserUser}> participate in bidding </button>
+                </div>
             </div>
 
-            <button onClick={resgiserUser}> participate in bidding </button>
 
             
         </div>

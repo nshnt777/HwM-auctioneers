@@ -1,0 +1,60 @@
+.product-image{
+    width: 300px;
+}
+
+.bid-container{
+    display: flex;
+    flex-direction:  row;
+    width: 100vw;
+}
+
+.bid-details{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 70%;
+    height: 70vh;
+    font-size: x-large;
+    box-sizing: border-box;
+}
+
+.current-bid{
+    background-color: teal;
+    padding: 20px;
+    border-radius: 10px;
+    color: white;
+    /* margin-bottom: 3em; */
+}
+
+.remaining-time{
+    color: rgb(193, 20, 20);
+    margin-top: 2em;
+}
+
+
+.new-bid>input[type="number"]{
+    height: 3em;
+    border: 1px solid teal;
+    outline: none;
+    padding: 0 10px;
+    font-size: medium;
+}
+
+.new-bid>button{
+    height: 3.1em;
+    cursor: pointer;
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 0 5px;
+    font-size: medium;
+}
+
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

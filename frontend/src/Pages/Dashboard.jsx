@@ -1,5 +1,5 @@
-import Header from "../Components/Header";
-import ProductCard from "../Components/ProductCard";
+import Header from "../Components/Header.jsx";
+import ProductCard from "../Components/ProductCard.jsx";
 
 function Dashboard(){
     return(

@@ -1,4 +1,4 @@
-# Step to test and run:
+# Steps to test and run:
 **Required:** Nodejs (preferably v20) and npm (preferably v10)
 
 ## To clone locally

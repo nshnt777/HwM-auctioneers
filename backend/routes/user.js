@@ -160,4 +160,36 @@ userRouter.get('/me', authMiddleware, async (req, res)=>{
     }
 })
 
+const registerSchema = z.object({
+    email: z.string().email() ,
+    mobile: z.number().optional()
+});
+
+const participants = []
+
+userRouter.post('/participate', (req, res) => {
+    const { email, productId } = req.body;
+
+    const existingUser = participants.find((p) => {
+        return p.email === email && p.productId === productId
+    });
+    if (existingUser) {
+        console.log("User already registered")
+        return res.status(409).json({
+            message: 'User already registered for this auction'
+        });
+    }
+
+    const newParticipant = {
+        email: email,
+        productId: productId
+    };
+    participants.push(newParticipant);
+    console.log("User registered")
+    return res.status(200).json({
+        message: 'User registered successfully',
+        user: newParticipant
+    });
+});
+
 export default userRouter;

@@ -43,6 +43,15 @@ function Signup(){
                     }, [lastName])} />
 
                     <InputBox 
+                        type={"number"} 
+                        label={"Mobile Number"} 
+                        name={"mobile"} 
+                        placeholder={""} 
+                        onChange={useCallback((e)=>{
+                            setMobile(e.target.value);
+                    }, [mobile])} />
+
+                    <InputBox 
                         type={"email"} 
                         label={"Email"} 
                         name={"username"} 
@@ -62,15 +71,16 @@ function Signup(){
 
                     <Button text={"Sign Up"} onClick={async ()=>{
                         try{
-                            const result = await axios.post("https://paytm-clone-api.vercel.app/api/v1/user/signup", {
+                            const result = await axios.post("http://localhost:3000/api/v1/user/signup", {
                                 username: username,
                                 firstName: firstName,
                                 lastName: lastName,
-                                password: password
+                                password: password,
+                                mobile: mobile
                             });
                             
                             localStorage.setItem("token", result.data.token);
-                            navigate('/dashboard');
+                            navigate('/home');
                         }
                         catch(error){
                             if (error.response) {

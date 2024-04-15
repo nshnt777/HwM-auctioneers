@@ -1,1 +1,0 @@
-mongodb+srv://ns227758:0JxiC5E4dq7oVGTy@cluster1.6p0fwmb.mongodb.net/

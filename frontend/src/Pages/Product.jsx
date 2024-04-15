@@ -32,6 +32,7 @@ function Product({prodId}){
     return(
         <div>
             <Header />
+
             <div className='container'>
                 <div className='product-image'>
                     <img src="../../public/product.jpg" alt="prod img"/>
@@ -45,9 +46,6 @@ function Product({prodId}){
                     <button onClick={resgiserUser}> participate in bidding </button>
                 </div>
             </div>
-
-
-            
         </div>
     )
 }

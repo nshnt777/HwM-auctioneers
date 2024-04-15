@@ -10,6 +10,7 @@ export default function ProductCard(){
 
     return(
         <div className="card" onClick={goToProduct}>
+
             <div className='image'>
                 <img src="../../public/product.jpg" width={"100px"} alt="prod img"/>
             </div>

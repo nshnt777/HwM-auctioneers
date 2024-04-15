@@ -1,0 +1,25 @@
+ul{
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+}
+
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.header{
+    background-color: teal;
+    width: 100%;
+}
+
+form{
+    margin: 1em;
+    margin-right: 3em;
+}
+
+form>input{
+    width: 20rem;
+}

@@ -1,6 +1,8 @@
+import './Header.css';
+
 function Header(){
     return(
-        <div>
+        <div className='header'>
             <header>
                 <nav>
                     <ul>
@@ -8,10 +10,14 @@ function Header(){
                         <li>About us</li>
                         <li>Contact us</li>
                         <li>Register as expert</li>
+                        <li>Sell product</li>
                     </ul>
                 </nav>
-            </header>
 
+                <form>
+                    <input type="search" placeholder="Search for products" />
+                </form>
+            </header>
         </div>
     )
 }

@@ -1,5 +1,5 @@
 # Step to test and run:
-## to clone locally
+## To clone locally
 1. git clone https://github.com/nshnt777/HwM-auctioneers.git
 2. cd HwM-auctioneers
    
@@ -17,4 +17,4 @@
 6. Click on a product on home page to go to product page.
 7. Click on pariticipate in bidding to enroll in it.
 
-** Not fully implemented yet work is being constantly done **
+**Not fully implemented yet work is being constantly done**

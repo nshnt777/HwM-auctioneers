@@ -5,6 +5,7 @@ env.config();
 const dbUser = process.env.DB_USER;
 const dbPass = process.env.DB_PASS;
 
+
 mongoose.connect(`mongodb+srv://${dbUser}:${dbPass}@cluster1.6p0fwmb.mongodb.net/`)
 .then((result) => {
     console.log("Database connected successfully");
@@ -18,8 +19,7 @@ const userSchema = new mongoose.Schema({
     password: {type: String, required: true, minLength: 8},
     firstName: {type: String, required: true},
     lastName: {type: String, required: false},
-    mobile: {type: Number, required: true},
-    role: {type: Number, required: true} 
+    mobile: {type: Number, required: true}
 });
 
 const UserModel = mongoose.model("Users", userSchema);

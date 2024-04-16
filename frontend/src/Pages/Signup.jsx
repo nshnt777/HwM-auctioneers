@@ -12,7 +12,7 @@ function Signup(){
     const [lastName, setLastName] = useState("");
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
-    const [mobile, setMobile] = useState("");
+    const [mobile, setMobile] = useState();
 
     const navigate = useNavigate();
 
@@ -72,11 +72,11 @@ function Signup(){
                     <Button text={"Sign Up"} onClick={async ()=>{
                         try{
                             const result = await axios.post("http://localhost:3000/api/v1/user/signup", {
-                                username: username,
+                                email: username,
                                 firstName: firstName,
                                 lastName: lastName,
                                 password: password,
-                                mobile: mobile
+                                mobile: parseInt(mobile)
                             });
                             
                             localStorage.setItem("token", result.data.token);

@@ -15,15 +15,16 @@ const signupSchema = z.object({
     firstName: z.string(),
     lastName: z.string().optional(),
     password: z.string().min(8),
-    mobile: z.number({
-        required_error: "Phone number is required",
-        invalid_type_error: "Phone number must be a number"
-    }).int().positive(),
-    role: z.string()
+    // mobile: z.number({
+    //     required_error: "Phone number is required",
+    //     invalid_type_error: "Phone number must be a number"
+    // }).int().positive(),
+    mobile: z.number()
 });
 
 userRouter.post('/signup', async (req, res)=>{
     const signupBody = req.body;
+    console.log(signupBody)
     try {
         if(!signupSchema.safeParse(signupBody).success){
             return res.status(411).json({
@@ -31,7 +32,7 @@ userRouter.post('/signup', async (req, res)=>{
             });
         }
     
-        const existingUser = await UserModel.find({username: signupBody.username});
+        const existingUser = await UserModel.find({email: signupBody.email});
         if(existingUser.length > 0){
             return res.status(411).json({
                 message: "Email already taken"
@@ -52,7 +53,7 @@ userRouter.post('/signup', async (req, res)=>{
         console.log("Error: ", error.message);
 
         return res.status(411).json({
-            error: "Error while creating user" 
+            message: "Error while creating user" 
         })
     }
 });
